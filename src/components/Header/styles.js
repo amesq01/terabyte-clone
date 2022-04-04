@@ -1,4 +1,11 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const animationDropDown = keyframes`
+  from { transform: translateY(20px)}
+  to { transform: translateY(0)}
+  
+
+`;
 
 export const Container = styled.div`
   height: 60px;
@@ -52,11 +59,13 @@ export const Search = styled.div`
   margin-left: 40px;
   align-items: center;
   flex: 1;
+  justify-content: center;
 `;
 
 export const Input = styled.input`
   height: 70%;
   flex: 1;
+  max-width: 750px;
   border: none;
   padding: 0 10px;
   font-size: 14px;
@@ -78,11 +87,94 @@ export const AccountInfo = styled.div`
   display: flex;
   align-items: center;
   margin-left: 40px;
+  position: relative;
 
   strong {
     color: #fff;
     margin: 0 10px;
     font-weight: normal;
+  }
+  &:hover {
+    div {
+      display: flex;
+    }
+  }
+`;
+
+export const AccountDropDown = styled.div`
+  display: flex;
+  width: 170px;
+
+  background-color: #fff;
+  position: absolute;
+  bottom: -92px;
+  left: -12px;
+  z-index: 1000;
+
+  flex-direction: column;
+  padding: 5px 0;
+
+  animation: ${animationDropDown} 0.3s;
+  display: none;
+`;
+export const MyAccountSettings = styled.div`
+  color: #666666;
+  font-size: 12px;
+  padding: 5px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+  span {
+    margin-left: 5px;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+  }
+`;
+export const WishList = styled.div`
+  color: #666666;
+  font-size: 12px;
+
+  display: flex;
+  padding: 5px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.05);
+
+  span {
+    margin-left: 5px;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+  }
+`;
+export const BadgeWishList = styled.div`
+  display: flex;
+  width: 18px;
+  height: 18px;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: red;
+
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 5px;
+`;
+
+export const CallCenter = styled.div`
+  color: #666666;
+  font-size: 12px;
+
+  display: flex;
+  padding: 5px;
+
+  span {
+    margin-left: 5px;
+  }
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
   }
 `;
 export const CartIcon = styled.div`

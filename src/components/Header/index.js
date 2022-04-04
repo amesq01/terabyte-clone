@@ -11,6 +11,11 @@ import {
   Input,
   SearchButton,
   Badge,
+  AccountDropDown,
+  MyAccountSettings,
+  WishList,
+  BadgeWishList,
+  CallCenter,
 } from "./styles";
 
 import {
@@ -44,6 +49,21 @@ export const Header = () => {
           </SearchButton>
         </Search>
         <AccountInfo>
+          <AccountDropDown>
+            <MyAccountSettings>
+              <FaUserAlt size={12} color="#666666" />
+              <span>Minha Conta</span>
+            </MyAccountSettings>
+            <WishList>
+              <FaUserAlt size={12} color="#666666" />
+              <span>Lista de desejos</span>
+              <BadgeWishList>0</BadgeWishList>
+            </WishList>
+            <CallCenter>
+              <FaUserAlt size={12} color="#666666" />
+              <span>Central de Atendimentos</span>
+            </CallCenter>
+          </AccountDropDown>
           <FaUserAlt color="white" />
           <strong>Gamers</strong>
           <FaChevronDown color="white" />

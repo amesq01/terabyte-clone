@@ -1,6 +1,15 @@
 import styled, { keyframes } from "styled-components";
 
-const upDown = keyframes``;
+const upDown = keyframes`
+  from {transform: translateY(0px) }
+  to {transform: translateY(-30px) }
+ 
+`;
+const opacity = keyframes`
+  from {opacity:0 }
+  to {opacity:1 }
+ 
+`;
 
 export const Container = styled.div`
   width: 100%;
@@ -15,19 +24,7 @@ export const Content = styled.div`
 
   display: flex;
 `;
+
 export const ItemWrapper = styled.div`
-  margin-left: 30px;
-  img {
-    width: 100%;
-  }
-  p {
-    opacity: 0;
-  }
-  span {
-    &:hover {
-      & ~ p {
-        opacity: 1;
-      }
-    }
-  }
+  animation: ${upDown} 3s, ${opacity} 10s;
 `;
