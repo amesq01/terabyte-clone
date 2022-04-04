@@ -1,4 +1,6 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const upDown = keyframes``;
 
 export const Container = styled.div`
   width: 100%;
